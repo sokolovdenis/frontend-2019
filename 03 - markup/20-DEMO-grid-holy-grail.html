@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid Layout</title>
+	<style>
+
+		body {
+			margin: 0;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: 200px auto 20%;
+			grid-template-rows: 100px auto 150px;
+			grid-template-areas:
+				"header header header"
+				"navigation main sidebar"
+				"footer footer footer";
+			height: 100vh;
+		}
+
+		.header {
+			background: lightblue;
+			grid-area: header;
+		}
+
+		.footer {
+			background: lightblue;
+			grid-area: footer;
+		}
+
+		.main {
+			grid-area: main;
+		}
+
+		.navigation {
+			background: lightgreen;
+			grid-area: navigation;
+		}
+
+		.sidebar {
+			background: lightcoral;
+			grid-area: sidebar;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="header">header</div>
+		<div class="navigation">navigation</div>
+		<div class="main">main</div>
+		<div class="sidebar">sidebar</div>
+		<div class="footer">footer</div>
+	</div>
+
+</body>
+</html>

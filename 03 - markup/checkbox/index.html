@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Page Title</title>
+	<style>
+
+		.cb {
+			display: block;
+			margin-left: 1.2em;
+			margin-bottom: 1em;
+		}
+
+		.cb__input {
+			position: absolute;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+		.cb__box {
+			position: absolute;
+			margin-left: -1.2em;
+			width: 1em;
+			height: 1em;
+			background-size: 1em 1em;
+		}
+
+		.cb__input:not(:checked):not(:disabled):not(:focus) + .cb__box {
+			background-image: url('img/unchecked.svg');
+		}
+
+		.cb__input:checked:not(:disabled):not(:focus) + .cb__box {
+			background-image: url('img/checked.svg');
+		}
+
+		.cb__input:not(:checked):not(:disabled):focus + .cb__box {
+			background-image: url('img/unchecked-focused.svg');
+		}
+
+		.cb__input:checked:not(:disabled):focus + .cb__box {
+			background-image: url('img/checked-focused.svg');
+		}
+
+		.cb__input:not(:checked):disabled + .cb__box {
+			background-image: url('img/unchecked-disabled.svg');
+		}
+
+		.cb__input:checked:disabled + .cb__box {
+			background-image: url('img/checked-disabled.svg');
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<label class="cb">
+		<input class="cb__input" type="checkbox" />
+		<div class="cb__box"></div>
+		Чекбокс
+	</label>
+
+	<label class="cb">
+		<input class="cb__input" type="checkbox" checked />
+		<div class="cb__box"></div>
+		Чекбокс чекд
+	</label>
+
+	<label class="cb">
+		<input class="cb__input" type="checkbox" disabled />
+		<div class="cb__box"></div>
+		Чекбокс дизейблд
+	</label>
+
+	<label class="cb">
+		<input class="cb__input" type="checkbox" checked disabled />
+		<div class="cb__box"></div>
+		Чекбокс чекд дизейблд
+	</label>
+
+
+</body>
+
+</html>

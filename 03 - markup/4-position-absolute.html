@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>position: absolute</title>
+		<style>
+			.foo, .bar {
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				margin: 5px;
+				border: 5px solid;
+			}
+
+			.foo {
+				border-color: black;
+				background: blue;
+			}
+
+			.bar {
+				border-color: gray;
+				background: aqua;
+				font: 20px Arial;
+			}
+
+			.bar {
+				position: absolute;
+				top: 50px;
+				left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="foo"></div>
+		<div class="foo"></div>
+		<div class="foo" style="position: relative;">
+			<div class="bar">
+				absolute inside relative
+			</div>
+		</div>
+		<div class="foo"></div>
+		<div class="foo">
+			<div class="bar">
+				absolute inside static
+			</div>
+		</div>
+		<div class="foo"></div>
+	</body>
+</html>

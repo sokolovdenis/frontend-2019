@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flexbox</title>
+		<style>
+			header {
+				background: lightseagreen;
+				color: white;
+				font-size: 16px;
+				font-family: Arial, Helvetica, sans-serif;
+				padding: 40px;
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+			}
+
+			.logo {
+				font-size: 24px;
+				margin-right: 50px;
+			}
+
+			.main-menu a {
+				color: wheat;
+				margin: 0 5px;
+			}
+
+			.main-menu {
+				flex-grow: 1;
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+				align-content: space-around;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				display: flex;
+				flex-grow: 1;
+			}
+
+			footer {
+				background: lightseagreen;
+			}
+
+			main {
+				flex-grow: 1;
+			}
+
+			.side-menu {
+				width: 200px;
+				background: lightskyblue;
+			}
+
+			aside {
+				width: 20%;
+				background: lemonchiffon;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo">My Software Company Inc.</div>
+			<nav class="main-menu">
+				<a href="#">Products</a>
+				<a href="#">Solutions</a>
+				<a href="#">Management</a>
+				<a href="#">Career</a>
+				<a href="#">Contacts</a>
+			</nav>
+		</header>
+
+		<div class="container">
+			<nav class="side-menu">menu</nav>
+			<main>main</main>
+			<aside>aside</aside>
+		</div>
+
+		<footer>
+			footer
+		</footer>
+	</body>
+</html>

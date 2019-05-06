@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fluid</title>
+	<style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.block {
+			height: 200px;
+			width: 100%;
+		}
+
+		.c1 {
+			background: lightblue;
+		}
+
+		.c2 {
+			background: lightyellow;
+		}
+
+		.c3 {
+			background: lightsalmon;
+		}
+
+		.c4 {
+			background: lightgreen;
+		}
+
+		.c5 {
+			background: lightpink;
+		}
+
+		@media (min-width: 425px) {
+			.c1, .c2 {
+				width: 50%;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.c3 {
+				width: 75%;
+			}
+			.c4 {
+				width: 25%;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.container {
+				width: 1024px;
+				margin: 0 auto;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="block c1">Logo</div>
+		<div class="block c2">Menu</div>
+		<div class="block c3">Content</div>
+		<div class="block c4">Ads</div>
+		<div class="block c5">Footer</div>
+	</div>
+
+</body>
+
+</html>
